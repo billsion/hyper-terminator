@@ -12,8 +12,6 @@ header("Content-type: text/html; charset=utf-8");
 //提取完成   
 ?>
 
-
-
 <html>
 <head>
     <title>智能法官-多人工智能共识机制</title>
