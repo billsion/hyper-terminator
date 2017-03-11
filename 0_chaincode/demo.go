@@ -13,39 +13,39 @@ import (
 	"github.com/hyperledger/fabric/core/chaincode/shim"
 )
 
-// SimpleChaincode example simple Chaincode implementation
-type SimpleChaincode struct {
+// Chaincode implementation
+type HyperTerminator struct {
 }
 
 func main() {
-	err := shim.Start(new(SimpleChaincode))
+	err := shim.Start(new(HyperTerminator))
 	if err != nil {
 		fmt.Printf("Error starting Simple chaincode: %s", err)
 	}
 }
 
 // Init resets all the things
-func (t *SimpleChaincode) Init(stub shim.ChaincodeStubInterface, function string, args []string) ([]byte, error) {
+func (t *HyperTerminator) Init(stub shim.ChaincodeStubInterface, function string, args []string) ([]byte, error) {
 	if len(args) != 4 {
 		return nil, errors.New("Incorrect number of arguments. Expecting 4")
 	}
 
-	err1 := stub.PutState("hello_world1", []byte(args[0]))
+	err1 := stub.PutState("var_word1", []byte(args[0]))
 	if err1 != nil {
 		return nil, err1
 	}
 
-	err2 := stub.PutState("hello_world2", []byte(args[1]))
+	err2 := stub.PutState("var_word2", []byte(args[1]))
 	if err2 != nil {
 		return nil, err2
 	}
 
-	err3 := stub.PutState("hello_world3", []byte(args[2]))
+	err3 := stub.PutState("var_word3", []byte(args[2]))
 	if err3 != nil {
 		return nil, err3
 	}
 	
-	err0 := stub.PutState("hello_world0", []byte(args[3]))
+	err0 := stub.PutState("var_word0", []byte(args[3]))
 	if err0 != nil {
 		return nil, err0
 	}
@@ -54,7 +54,7 @@ func (t *SimpleChaincode) Init(stub shim.ChaincodeStubInterface, function string
 }
 
 // Invoke isur entry point to invoke a chaincode function
-func (t *SimpleChaincode) Invoke(stub shim.ChaincodeStubInterface, function string, args []string) ([]byte, error) {
+func (t *HyperTerminator) Invoke(stub shim.ChaincodeStubInterface, function string, args []string) ([]byte, error) {
 	fmt.Println("invoke is running " + function)
 
 	// Handle different functions
@@ -69,7 +69,7 @@ func (t *SimpleChaincode) Invoke(stub shim.ChaincodeStubInterface, function stri
 }
 
 // Query is our entry point for queries
-func (t *SimpleChaincode) Query(stub shim.ChaincodeStubInterface, function string, args []string) ([]byte, error) {
+func (t *HyperTerminator) Query(stub shim.ChaincodeStubInterface, function string, args []string) ([]byte, error) {
 	fmt.Println("query is running " + function)
 
 	// Handle different functions
@@ -82,7 +82,7 @@ func (t *SimpleChaincode) Query(stub shim.ChaincodeStubInterface, function strin
 }
 
 // write - invoke function to write key/value pair
-func (t *SimpleChaincode) write(stub shim.ChaincodeStubInterface, args []string) ([]byte, error) {
+func (t *HyperTerminator) write(stub shim.ChaincodeStubInterface, args []string) ([]byte, error) {
 	var key1, value1, key2, value2, key3, value3, key0, value0 string
 	var err1, err2, err3, err0 error
 	fmt.Println("running write()")
@@ -91,18 +91,18 @@ func (t *SimpleChaincode) write(stub shim.ChaincodeStubInterface, args []string)
 		return nil, errors.New("Incorrect number of arguments. Expecting 6. name of the key and value to set")
 	}
 
-	key1 = args[0] //rename for funsies
+	key1 = args[0] 
 	value1 = args[1]
-	key2 = args[2] //rename for funsies
+	key2 = args[2] 
 	value2 = args[3]
-	key3 = args[4] //rename for funsies
+	key3 = args[4] 
 	value3 = args[5]
 	
 	key0 = args[6]
 	
 	
 	//共识：少数服从多数
-	
+	//Consensus: the minority is subordinate to the majority
 	if value1 == value2 {
 	value0 = value1
 	}else if value2 == value3 {
@@ -111,6 +111,7 @@ func (t *SimpleChaincode) write(stub shim.ChaincodeStubInterface, args []string)
 	value0 = value1
 	}else{
 	value0 = value1  //如果三者均不同 则以1号为准
+	// when the majority opinion cannot be formed, the number 1 shall prevail
 	}
 	
 	
@@ -139,7 +140,7 @@ func (t *SimpleChaincode) write(stub shim.ChaincodeStubInterface, args []string)
 }
 
 // read - query function to read key/value pair
-func (t *SimpleChaincode) read(stub shim.ChaincodeStubInterface, args []string) ([]byte, error) {
+func (t *HyperTerminator) read(stub shim.ChaincodeStubInterface, args []string) ([]byte, error) {
 	var key0,jsonResp0 string
 	var err0 error
 
