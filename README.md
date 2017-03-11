@@ -52,11 +52,15 @@ hyper-terminator          黑客马拉松作品 Works in Hackathon 2017
   
 ## 技术与工具 Technology&Tools
 
-* IBM Hyperledger (<a href="https://console.ng.bluemix.net/" target=_blank>Bluemix</a>)
-* IPFS
-* PaddlePaddle
-* Darknet
-* Apache+PHP+Mysql
-* Python2.7 
+* <a href="http://www.hyperledger.org/">IBM Hyperledger</a> (<a href="https://console.ng.bluemix.net/">Bluemix</a>)
+* <a href="http://ipfs.io">IPFS</a>
+* <a href="http://paddlepaddle.org">PaddlePaddle</a>
+* <a href="https://pjreddie.com/darknet/">Darknet</a>
+* <a href="http://www.php.net/">PHP</a>+<a href="https://www.mysql.com/">Mysql</a>
+* <a href="https://www.python.org/">Python2.7</a> 
 * ……
 
+## 致谢 Thanks to
+
+* <a href="http://www.wanda.cn/wandachanye/network/">万达科技 WANDA TECHNOLOGY</a>
+* 
