@@ -117,7 +117,6 @@ error_reporting(0);
     <script type="text/javascript" src="../seqToseq/GMU/js/core/widget.js"></script>
     <script type="text/javascript" src="../seqToseq/GMU/js/widget/refresh/refresh.js"></script>
     <!--组件依赖js end-->
-  
 </head>
 
 <body>
