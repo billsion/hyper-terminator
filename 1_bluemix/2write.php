@@ -76,10 +76,5 @@ $response = \Httpful\Request::post($url)
 	
 echo 'start'.$response->raw_body.'end';
 
-
-
-
-
-
 ?>
 
