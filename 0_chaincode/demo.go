@@ -139,7 +139,7 @@ func (t *HyperTerminator) write(stub shim.ChaincodeStubInterface, args []string)
 	
 }
 
-// read - query function to read key/value pair
+// read
 func (t *HyperTerminator) read(stub shim.ChaincodeStubInterface, args []string) ([]byte, error) {
 	var key0,jsonResp0 string
 	var err0 error
