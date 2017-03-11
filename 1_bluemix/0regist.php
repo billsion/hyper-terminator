@@ -12,6 +12,5 @@ echo 'start'.$response->raw_body.'end';
 
 // https://23243849d2e747e384490629e9e93183-vp3.us.blockchain.ibm.com:5003/registrar/admin
 
-
 ?>
 
