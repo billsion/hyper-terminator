@@ -54,10 +54,10 @@ hyper-terminator          黑客马拉松作品 Works in Hackathon 2017
   
 ## 技术与工具 Technology&Tools
 
->IBM Hyperledger (Bluemix)
->IPFS
->PaddlePaddle
->Darknet
->Apache+PHP+Mysql
->Python2.7 
->……
+#IBM Hyperledger (Bluemix)
+#IPFS
+#PaddlePaddle
+#Darknet
+#Apache+PHP+Mysql
+#Python2.7 
+#……
