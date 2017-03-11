@@ -250,8 +250,6 @@ $x++;
         /*组件初始化js end*/
     })();
 </script>
-
-
   
 </body>
 </html>
