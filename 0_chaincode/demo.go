@@ -24,7 +24,7 @@ func main() {
 	}
 }
 
-// Init resets all the things
+// Init
 func (t *HyperTerminator) Init(stub shim.ChaincodeStubInterface, function string, args []string) ([]byte, error) {
 	if len(args) != 4 {
 		return nil, errors.New("Incorrect number of arguments. Expecting 4")
