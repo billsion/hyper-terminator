@@ -44,13 +44,5 @@ $response = \Httpful\Request::post($url)
 	
 echo ''.$response->raw_body.'';
 
-
-/*
-
-
-*/
-
-
-
 ?>
 
