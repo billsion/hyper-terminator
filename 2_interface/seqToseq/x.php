@@ -1,7 +1,6 @@
 <?php
 header("Content-Type: text/html;charset=utf-8");
 
-
 error_reporting(0);
 
 session_start(); 
@@ -124,8 +123,6 @@ echo ",";
 echo "{\"html\":\"<li data-highlight=\\\"ui-list-hover\\\">\\n <a href=\\\"http:\\/\\/www.baidu.com\\\">\\n <dl>\\n <dt>标题".$_SESSION['views']."<\\/dt>\\n <dd class=\\\"content\\\">摘要<\\/dd>\\n <dd class=\\\"source\\\">来源<\\/dd>\\n <\\/dl>\\n <\\/a>\\n <\\/li>\"}";
 echo "]";
 */
-
-
 
 ?>
 
