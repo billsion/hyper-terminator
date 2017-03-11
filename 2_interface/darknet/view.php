@@ -12,8 +12,6 @@ header("Content-type: text/html; charset=utf-8");
 //提取完成   
 ?>
 
-
-
 <html>
 <head>
     <title>目标检测-证据存储-法律定责方案</title>
