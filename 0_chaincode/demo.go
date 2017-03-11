@@ -156,7 +156,6 @@ func (t *HyperTerminator) read(stub shim.ChaincodeStubInterface, args []string) 
 	}
 	
 	//var return
-	
 	return valAsbytes0, nil
 }
 
