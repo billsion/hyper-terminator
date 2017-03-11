@@ -10,3 +10,4 @@ http://wenshu.court.gov.cn/
 Put run.php into crontab, just like this on Ubuntu:
 crontab -e
 */1 * * * * php /var/www/html/seqToseq/run.php
+ 
