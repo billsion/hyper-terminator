@@ -9,4 +9,4 @@ you can use use this way to run them on Ubuntu:
 ctrl+A+D
 2. scren loop.sh 
 ctrl+A+D
-
+ 
