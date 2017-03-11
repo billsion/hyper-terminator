@@ -52,7 +52,7 @@ hyper-terminator          黑客马拉松作品 Works in Hackathon 2017
   
 ## 技术与工具 Technology&Tools
 
-* IBM Hyperledger (Bluemix)
+* IBM Hyperledger (<a href="https://console.ng.bluemix.net/" target=_blank>Bluemix</a>)
 * IPFS
 * PaddlePaddle
 * Darknet
