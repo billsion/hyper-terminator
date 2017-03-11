@@ -2,19 +2,18 @@
 
 error_reporting(0);
 
-
 //session_start(); 
-//ÌáÈ¡Ò³ÃæºÍä¯ÀÀÆ÷Ìá½»µÄ±äÁ¿
+//æå–é¡µé¢å’Œæµè§ˆå™¨æäº¤çš„å˜é‡
 @extract($_SERVER, EXTR_SKIP); 
 @extract($_SESSION, EXTR_SKIP); 
 @extract($_POST, EXTR_SKIP); 
 @extract($_FILES, EXTR_SKIP); 
 @extract($_GET, EXTR_SKIP); 
 @extract($_ENV, EXTR_SKIP); 
-//ÌáÈ¡Íê³É
+//æå–å®Œæˆ
   
 /** 
- Í¼Æ¬Ñ¹Ëõ²Ù×÷Àà 
+ å›¾ç‰‡å‹ç¼©æ“ä½œç±» 
  v1.0 
 */  
    class Image{  
@@ -29,7 +28,7 @@ error_reporting(0);
              
        }  
        /** 
-       ´ò¿ªÍ¼Æ¬ 
+       æ‰“å¼€å›¾ç‰‡ 
        */  
        public function openImage(){  
              
@@ -45,20 +44,20 @@ error_reporting(0);
            $this->image = $fun($this->src);  
        }  
        /** 
-       ²Ù×÷Í¼Æ¬ 
+       æ“ä½œå›¾ç‰‡ 
        */  
        public function thumpImage(){  
              
             $new_width = $this->imageinfo['width'] * $this->percent;  
             $new_height = $this->imageinfo['height'] * $this->percent;  
             $image_thump = imagecreatetruecolor($new_width,$new_height);  
-            //½«Ô­Í¼¸´ÖÆ´øÍ¼Æ¬ÔØÌåÉÏÃæ£¬²¢ÇÒ°´ÕÕÒ»¶¨±ÈÀıÑ¹Ëõ,¼«´óµÄ±£³ÖÁËÇåÎú¶È  
+            //å°†åŸå›¾å¤åˆ¶å¸¦å›¾ç‰‡è½½ä½“ä¸Šé¢ï¼Œå¹¶ä¸”æŒ‰ç…§ä¸€å®šæ¯”ä¾‹å‹ç¼©,æå¤§çš„ä¿æŒäº†æ¸…æ™°åº¦  
             imagecopyresampled($image_thump,$this->image,0,0,0,0,$new_width,$new_height,$this->imageinfo['width'],$this->imageinfo['height']);  
             imagedestroy($this->image);    
             $this->image =   $image_thump;  
        }  
        /** 
-       Êä³öÍ¼Æ¬ 
+       è¾“å‡ºå›¾ç‰‡ 
        */  
        public function showImage(){  
              
@@ -68,7 +67,7 @@ error_reporting(0);
              
        }  
        /** 
-       ±£´æÍ¼Æ¬µ½Ó²ÅÌ 
+       ä¿å­˜å›¾ç‰‡åˆ°ç¡¬ç›˜ 
        */  
        public function saveImage($name){  
              
@@ -77,7 +76,7 @@ error_reporting(0);
              
        }  
        /** 
-       Ïú»ÙÍ¼Æ¬ 
+       é”€æ¯å›¾ç‰‡ 
        */  
        public function __destruct(){  
              
@@ -93,11 +92,11 @@ error_reporting(0);
     $array = getimagesize($src);
     //print_r($array);
 
-    $ws=$array[0]; //¿í¶È
-    $hs=$array[1]; //¸ß¶È
+    $ws=$array[0]; //å®½åº¦
+    $hs=$array[1]; //é«˜åº¦
 
-    $ws_old=$ws; //¿í¶È
-    $hs_old=$hs; //¸ß¶È
+    $ws_old=$ws; //å®½åº¦
+    $hs_old=$hs; //é«˜åº¦
 	
 for($i=1;$i<20;$i++)
 {
@@ -105,7 +104,7 @@ for($i=1;$i<20;$i++)
 	{
 	$ws = $ws*0.9;
 	}
-	else //´ïµ½±ê×¼ÒÔÏÂÁË
+	else //è¾¾åˆ°æ ‡å‡†ä»¥ä¸‹äº†
 	{
 	$bili = round(($ws/$ws_old),2);
 	}
